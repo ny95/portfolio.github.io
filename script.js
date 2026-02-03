@@ -71,3 +71,27 @@ if (projectTrack) {
     { passive: false }
   );
 }
+
+const expToggles = document.querySelectorAll('.exp-toggle');
+
+expToggles.forEach((button) => {
+  const targetId = button.getAttribute('aria-controls');
+  const target = targetId ? document.getElementById(targetId) : null;
+  const label = button.querySelector('.exp-toggle-text');
+
+  if (!target || !label) {
+    return;
+  }
+
+  button.addEventListener('click', () => {
+    const isOpen = button.getAttribute('aria-expanded') === 'true';
+    const nextOpen = !isOpen;
+    const openText = button.dataset.openText || 'View Details';
+    const closeText = button.dataset.closeText || 'Hide Details';
+
+    button.setAttribute('aria-expanded', String(nextOpen));
+    target.classList.toggle('is-open', nextOpen);
+    target.setAttribute('aria-hidden', String(!nextOpen));
+    label.textContent = nextOpen ? closeText : openText;
+  });
+});
