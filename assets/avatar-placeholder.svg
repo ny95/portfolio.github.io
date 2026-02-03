@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1c2230" />
+      <stop offset="100%" stop-color="#2f3c55" />
+    </linearGradient>
+    <radialGradient id="r" cx="30%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#5ed6ff" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="480" height="480" rx="48" fill="url(#g)" />
+  <rect width="480" height="480" rx="48" fill="url(#r)" />
+  <circle cx="240" cy="200" r="92" fill="#dfe7f5" fill-opacity="0.18" />
+  <path d="M120 390c24-74 92-118 120-118s96 44 120 118" fill="#dfe7f5" fill-opacity="0.18" />
+  <text x="240" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="64" fill="#f6f9ff" fill-opacity="0.75">NY</text>
+</svg>
