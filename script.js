@@ -95,3 +95,11 @@ expToggles.forEach((button) => {
     label.textContent = nextOpen ? closeText : openText;
   });
 });
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js").catch(() => {
+      // Keep site functional even if SW registration fails.
+    });
+  });
+}
